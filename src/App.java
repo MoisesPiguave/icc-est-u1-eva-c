@@ -1,3 +1,6 @@
+import Models.Book;
+import Controllers.BookController;
+import Views.ViewConsole;
 public class App {
     public static void main(String[] args) throws Exception {
 
@@ -33,6 +36,15 @@ public class App {
                 new Book("Deep Learning", 2016),
                 new Book("The Elements of Statistical Learning", 2001)
         };
+
+        BookController bc = new BookController();
+        ViewConsole vc = new ViewConsole();
+
+        bc.searchByName(books, "Python the best book");
+        bc.searchByName(books, "Deep Learning");
+        vc.showmessage("me falto tiempo :c");
+        
+         
 
     }
 }
